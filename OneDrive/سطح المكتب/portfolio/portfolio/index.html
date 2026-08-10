@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nour Eddine Maher | Full Stack .NET & Angular Developer</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230f766e'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-size='50' font-family='Arial' fill='white'%3EN%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="loadingScreen">
+        <div id="loadingName">
+            <span class="word-nour"></span>
+            <span class="word-eddine"></span>
+            <span class="word-maher"></span>
+        </div>
+    </div>
+
+    <button class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="./photo_2022-09-03_04-55-23.jpg" alt="Nour Eddine Maher">
+                </div>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#timeline" class="nav-link"><i class="fas fa-stream"></i> Timeline</a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
+                    <li><a href="#portfolio" class="nav-link"><i class="fas fa-briefcase"></i> Portfolio</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                    <div class="nav-menu-actions">
+                        <button class="theme-toggle mobile-theme-toggle" id="mobileThemeToggle" title="Toggle Dark/Light Mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button class="admin-btn mobile-admin-btn" id="mobileAdminBtn">Admin</button>
+                    </div>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="admin-btn" id="adminBtn">Admin</button>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero fade-in-up" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in-left">
+                    <h1 class="animated-name" id="heroName"></h1>
+                    <p class="subtitle">I'm a <span class="typing"></span></p>
+                    <p>As a Full Stack .NET and Angular developer, I build enterprise-grade web applications with polished frontends, scalable backend services, and clean UX.</p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn btn-primary">
+                            <i class="fas fa-eye"></i> View My Work
+                        </a>
+                        <a href="./cv.pdf" download class="btn btn-outline">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image fade-in-right">
+                    <img src="./photo_2022-09-03_04-55-23.jpg" alt="Nour Eddine Maher" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about fade-in-up" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Passionate Front End Developer creating innovative digital solutions</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>
+                        <span>Frontend</span> <span>Developer</span> <span>&</span> <span>Designer</span>
+                    </h3>
+                    <p>Hello! I'm Nour Eddine Maher, a professional Full Stack developer focused on .NET backend services and Angular frontends. I also work with React to deliver modern interfaces and responsive business applications.</p>
+                    
+                    <div class="terminal-wrapper">
+                        <div class="terminal">
+                            <div class="terminal-header">
+                                <div class="terminal-button red"></div>
+                                <div class="terminal-button yellow"></div>
+                                <div class="terminal-button green"></div>
+                            </div>
+                            <div class="terminal-content" id="terminalContent"></div>
+                        </div>
+                    </div>
+                    
+                    <p>With a strong foundation in HTML5, CSS3, JavaScript, and React, I bring designs to life with clean, efficient code. I focus on creating accessible, performant websites that work seamlessly across all devices and platforms.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong><br>
+                                <span>nourmaher7791@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Phone</strong><br>
+                                <span>01091746420</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <strong>Experience</strong><br>
+                                <span>1+ Years</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <strong>Projects</strong><br>
+                                <span>10 Projects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="./photo_2022-09-03_04-55-23.jpg" alt="Nour Eddine Maher" loading="lazy">                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline fade-in-up" id="timeline">
+        <div class="container">
+            <div class="section-title">
+                <h2>Career Timeline</h2>
+                <p>From frontend foundations to backend .NET delivery</p>
+            </div>
+            <div class="timeline-grid">
+                <div class="timeline-item">
+                    <span class="timeline-year">2022</span>
+                    <h4>Built modern responsive websites</h4>
+                    <p>Started crafting polished UI experiences with HTML5, CSS3, JavaScript, and React.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2023</span>
+                    <h4>Delivered Angular applications</h4>
+                    <p>Launched scalable single-page apps with Angular, TypeScript and clean frontend architecture.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2024</span>
+                    <h4>Adopted .NET backend services</h4>
+                    <p>Built APIs with ASP.NET Core, Entity Framework and SQL Server for robust data-driven apps.</p>
+                </div>
+                <div class="timeline-item">
+                    <span class="timeline-year">2025</span>
+                    <h4>Focused on full stack solutions</h4>
+                    <p>Combined Angular frontends, .NET backends, Azure deployment and DevOps best practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills fade-in-up" id="skills">
+        <div class="container">
+            <div class="section-title section-title-with-action">
+                <div>
+                    <h2>My Skills</h2>
+                    <p>Technologies and tools I work with</p>
+                </div>
+                <button class="add-skill-btn" id="addSkillBtn" style="display: none;">
+                    <i class="fas fa-plus"></i> Add Skill
+                </button>
+            </div>
+            <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+    </section>
+
+    <section class="portfolio fade-in-up" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Portfolio</h2>
+                <p>Recent projects I've worked on</p>
+            </div>
+            <div class="portfolio-actions">
+                <button class="add-project-btn" id="addProjectBtn" style="display: none;">
+                    <i class="fas fa-folder-open"></i> Manage Projects
+                </button>
+            </div>
+            <div class="portfolio-grid" id="portfolioGrid"></div>
+        </div>
+    </section>
+
+    <section class="contact fade-in-up" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Let's work together on your next project</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Talk</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question about my work, want to discuss a potential collaboration, or just want to say hello, I'd love to hear from you.</p>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div><h4>Email</h4><p>nourmaher7791@gmail.com</p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div><h4>Phone</h4><p>01091746420</p></div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div><h4>Location</h4><p>Egypt</p></div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/xblkegwr" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder=" " required>
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder=" " required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/nour-cs19" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/noureddine-maher" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/noureddine_dev" class="social-link" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="mailto:nourmaher7791@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 Nour Eddine Maher. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Admin Login Page -->
+    <div id="adminLoginPage" class="project-page admin-login-page">
+        <div class="project-page-content">
+            <button class="page-close" id="closeAdminLoginPage" title="Close Login">&times;</button>
+            <div class="page-header">
+                <div>
+                    <h2>Admin Login</h2>
+                </div>
+            </div>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="adminUsername">Username</label>
+                    <input type="text" id="adminUsername" placeholder="Enter username" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" placeholder="Enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Project Management Page -->
+    <div id="projectManagerPage" class="project-page">
+        <div class="project-page-content">
+            <button class="page-close" id="closeProjectPage" title="Close Project Page">&times;</button>
+            <div class="page-header">
+                <div>
+                    <h2>Project Management</h2>
+                    <p>Manage your portfolio items from a sidebar-driven dashboard.</p>
+                </div>
+            </div>
+            <div class="project-dashboard">
+                <aside class="project-sidebar">
+                    <div class="sidebar-header">
+                        <div>
+                            <h3>Projects</h3>
+                            <p>Browse and remove portfolio entries.</p>
+                        </div>
+                        <button class="btn btn-secondary" id="projectManagerAddBtn">
+                            <i class="fas fa-plus"></i> New Project
+                        </button>
+                    </div>
+                    <div id="projectListSidebar" class="project-list"></div>
+                </aside>
+                <div class="project-dashboard-main">
+                    <div id="projectDetailsPanel" class="project-details-panel">
+                        <div class="details-empty">
+                            <h3>Select a project from the sidebar</h3>
+                            <p>Details and the remove action will appear here.</p>
+                        </div>
+                        <div id="selectedProjectInfo" class="selected-project-info hidden">
+                            <h3 id="selectedProjectName"></h3>
+                            <p id="selectedProjectCategory" class="project-category-label"></p>
+                            <p id="selectedProjectDescription"></p>
+                            <div id="selectedProjectTech" class="project-tech-tags"></div>
+                            <div class="project-details-actions">
+                                <a id="selectedProjectLink" href="#" class="btn btn-outline" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i> View Live
+                                </a>
+                                <button type="button" class="btn btn-danger" id="removeSelectedProjectBtn">
+                                    <i class="fas fa-trash"></i> Remove Project
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-form-panel">
+                        <div class="form-section-title">
+                            <h3 id="projectFormTitle">Add New Project</h3>
+                            <p id="projectFormSubtitle">Create a new portfolio entry for your portfolio.</p>
+                        </div>
+                        <form id="addProjectForm">
+                            <div class="form-group">
+                                <label for="projectName">Project Name *</label>
+                                <input type="text" id="projectName" placeholder="Enter project name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectCategory">Category *</label>
+                                <select id="projectCategory" required>
+                                    <option value="">Select Category</option>
+                                    <option value="web">Web Development</option>
+                                    <option value="design">Design</option>
+                                    <option value="mobile">Mobile App</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectDescription">Description *</label>
+                                <textarea id="projectDescription" placeholder="Describe your project" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectImages">Images (5 required) *</label>
+                                <input type="file" id="projectImages" accept="image/*" multiple required>
+                                <div id="imagePreviewContainer"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectLink">Live Demo Link *</label>
+                                <input type="url" id="projectLink" placeholder="https://example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="projectGithub">GitHub Link (Optional)</label>
+                                <input type="url" id="projectGithub" placeholder="https://github.com/username/repo">
+                            </div>
+                            <div class="form-group">
+                                <label for="technologyInput">Technologies</label>
+                                <div style="display: flex; gap: 10px;">
+                                    <input type="text" id="technologyInput" placeholder="e.g., React" style="flex: 1;">
+                                    <button type="button" class="btn btn-primary" onclick="addTechnology()" style="width: auto; padding: 12px 20px;">Add</button>
+                                </div>
+                                <div id="technologiesContainer"></div>
+                            </div>
+                            <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Add Project</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Skill Modal -->
+    <div id="addSkillModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addSkillModal')">&times;</span>
+            <h2>Add New Skill</h2>
+            <form id="addSkillForm">
+                <div class="form-group">
+                    <label for="skillName">Skill Name *</label>
+                    <input type="text" id="skillName" placeholder="Enter skill name" required>
+                </div>
+                <div class="form-group">
+                    <label for="skillIcon">Icon Class *</label>
+                    <input type="text" id="skillIcon" placeholder="e.g., fab fa-angular" required>
+                </div>
+                <div class="form-group">
+                    <label for="skillDescription">Description *</label>
+                    <textarea id="skillDescription" placeholder="Describe this skill" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Add Skill</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeGallery()">&times;</span>
+            <div class="gallery-image-container">
+                <img id="galleryMainImage" src="" alt="Gallery">
+            </div>
+            <div class="gallery-info-section">
+                <h3 id="galleryTitle"></h3>
+                <div id="galleryInfo" class="gallery-description"></div>
+                <div class="gallery-meta" id="galleryMeta"></div>
+                <div id="galleryTechnologies" class="gallery-technologies"></div>
+                <div class="gallery-thumbnails" id="galleryThumbnails"></div>
+                <div id="galleryActions" class="gallery-actions"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
