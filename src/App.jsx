@@ -11,7 +11,10 @@ import Register from './pages/Register'
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter basename="/my-eye-clinic">
+      {/* The Vercel deployment serves the app from the domain root. Keeping a
+          hard-coded project sub-path here makes every route fail to match and
+          results in a completely blank page on the deployed site. */}
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<MyLandingEye />} />
           <Route path="/admin/login" element={<AdminLogin />} />
