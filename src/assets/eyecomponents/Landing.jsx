@@ -5,6 +5,13 @@ import { Eye, Activity, Clock, Award, User, Calendar, Phone, Mail, MapPin, Check
 import { Link } from 'react-router-dom';
 import { api as apiClient } from '../../api/client';
 
+const PUBLIC_IMAGES = {
+  doctor: '/A slim, cheerful young male doctor in a 3D Pixar_Disney animation style_ He has big expressive eyes, smooth skin, and a friendly confident smile. He.jpg',
+  doctorPointing: '/animado 3d.jpg',
+  eyeExam: '/images1.jpg',
+  eyeCare: '/images.jpg'
+};
+
 const Counter = ({ end }) => {
   const [count, setCount] = useState(0);
   
@@ -269,7 +276,7 @@ const EyeCareLanding = () => {
       // Add logo (convert image to base64)
       const logoImg = new Image();
       logoImg.crossOrigin = 'anonymous';
-      logoImg.src = 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop';
+      logoImg.src = PUBLIC_IMAGES.eyeCare;
       
       await new Promise((resolve, reject) => {
         logoImg.onload = resolve;
@@ -419,7 +426,7 @@ const EyeCareLanding = () => {
       doc.setFontSize(8);
       doc.setFont('helvetica', 'normal');
       doc.setTextColor(0, 121, 107);
-      doc.text('📞 +1 (234) 567-8900    📧 info@eyecare.com    📍 123 Eye Street, Vision City, VC 12345', 105, yPos + 13, { align: 'center' });
+      doc.text('📞 +20 100 123 4567    📧 info@eyecare.com    📍 Cairo, Egypt', 105, yPos + 13, { align: 'center' });
       
       doc.setFontSize(7);
       doc.setTextColor(150, 150, 150);
@@ -567,7 +574,7 @@ const EyeCareLanding = () => {
       </head>
       <body>
         <div class="header">
-          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop" alt="EyeCare Logo" class="logo">
+          <img src="${PUBLIC_IMAGES.eyeCare}" alt="EyeCare" class="logo">
           <div class="company-name">EyeCare</div>
           <div class="tagline">Professional Eye Care Services</div>
         </div>
@@ -637,9 +644,9 @@ const EyeCareLanding = () => {
               Contact Us
             </div>
             <div class="contact-info">
-              <div class="contact-item">📞 +1 (234) 567-8900</div>
+              <div class="contact-item">📞 +20 100 123 4567</div>
               <div class="contact-item">📧 info@eyecare.com</div>
-              <div class="contact-item">📍 123 Eye Street, Vision City, VC 12345</div>
+              <div class="contact-item">📍 Cairo, Egypt</div>
             </div>
             <div style="margin-top: 20px; color: #999; font-size: 12px;">
               © ${new Date().getFullYear()} EyeCare. All rights reserved.
@@ -1237,7 +1244,7 @@ const EyeCareLanding = () => {
             <div className="col-md-6 d-none d-md-flex gap-3">
               <div className="d-flex align-items-center gap-2 hover-scale" style={{ cursor: 'pointer' }}>
                 <Phone size={14} />
-                <small>+1 (234) 567-8900</small>
+                <small>+20 100 123 4567</small>
               </div>
               <div className="d-flex align-items-center gap-2 hover-scale" style={{ cursor: 'pointer' }}>
                 <Mail size={14} />
@@ -1279,12 +1286,6 @@ const EyeCareLanding = () => {
       <nav className={`navbar navbar-expand-lg navbar-light sticky-top shadow-sm ${scrolled ? 'bg-white' : 'bg-light'}`} style={{ top: '38px', transition: 'all 0.3s' }}>
         <div className="container py-2">
           <a className="navbar-brand d-flex align-items-center hover-scale" href="#home">
-            <img 
-              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop" 
-              alt="EyeCare Logo" 
-              className="me-2 rounded-circle" 
-              style={{ width: '45px', height: '45px', objectFit: 'cover' }} 
-            />
             <span className="fw-bold fs-4" style={{ color: '#004d40' }}>EyeCare</span>
           </a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
@@ -1348,7 +1349,7 @@ const EyeCareLanding = () => {
             </AnimatedSection>
             <AnimatedSection className="col-lg-6">
               <div className="img-zoom rounded-4 overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=800&h=700&fit=crop" alt="Professional eye care consultation" className="img-fluid" />
+                <img src={PUBLIC_IMAGES.eyeCare} alt="Professional eye care consultation in Egypt" className="img-fluid" />
               </div>
             </AnimatedSection>
           </div>
@@ -1493,7 +1494,7 @@ const EyeCareLanding = () => {
           <div className="row align-items-center">
             <AnimatedSection className="col-lg-6 mb-4 mb-lg-0">
               <div className="img-zoom rounded-4 overflow-hidden shadow-lg position-relative">
-                <img src="https://images.unsplash.com/photo-1631815589968-fdb09a223b1e?w=600&h=500&fit=crop" alt="Patient testimonial video" className="img-fluid" />
+                <img src={PUBLIC_IMAGES.eyeExam} alt="Eye examination at our Egyptian clinic" className="img-fluid" />
                 <div className="position-absolute top-50 start-50 translate-middle">
                   <button className="rounded-circle d-flex align-items-center justify-content-center bg-white hover-scale" style={{ width: '80px', height: '80px', border: 'none', cursor: 'pointer' }} aria-label="Play video">
                     <Play size={32} color="#009688" fill="#009688" />
@@ -1690,7 +1691,7 @@ const EyeCareLanding = () => {
             <AnimatedSection className="col-lg-6">
               <div className="img-zoom rounded-4 overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=700&h=600&fit=crop" 
+                  src={PUBLIC_IMAGES.eyeExam}
                   alt="Appointment scheduling" 
                   className="img-fluid" 
                 />
@@ -1706,7 +1707,7 @@ const EyeCareLanding = () => {
           <div className="row align-items-center">
             <AnimatedSection className="col-lg-6 mb-4 mb-lg-0">
               <div className="img-zoom rounded-4 overflow-hidden shadow-lg">
-                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=700&h=600&fit=crop" alt="Eye care clinic team" className="img-fluid" />
+                <img src={PUBLIC_IMAGES.doctorPointing} alt="Eye care clinic team in Egypt" className="img-fluid" />
               </div>
             </AnimatedSection>
             <AnimatedSection className="col-lg-6">
@@ -1826,7 +1827,7 @@ const EyeCareLanding = () => {
                     </div>
                   </div>
                   <h5 className="fw-bold mb-3" style={{ color: '#004d40' }}>Visit Our Clinic</h5>
-                  <p className="text-muted mb-2">123 Eye Street, Vision City</p>
+                  <p className="text-muted mb-2">Cairo, Egypt</p>
                   <p className="text-muted mb-3">VC 12345, United States</p>
                   <div className="mb-3 p-2 rounded-3" style={{ backgroundColor: '#f8f9fa' }}>
                     <small className="text-muted d-block"><strong>Mon - Fri:</strong> 9:00 AM - 6:00 PM</small>
@@ -1834,7 +1835,7 @@ const EyeCareLanding = () => {
                     <small className="text-muted d-block"><strong>Sun:</strong> Closed</small>
                   </div>
                   <a 
-                    href="https://www.google.com/maps/search/?api=1&query=123+Eye+Street%2C+Vision+City%2C+VC+12345" 
+                    href="https://www.google.com/maps/search/?api=1&query=Cairo%2C+Egypt"
                     className="btn text-white w-100 btn-3d" 
                     style={{ backgroundColor: '#009688', borderRadius: '20px' }}
                     target="_blank" 
@@ -1857,11 +1858,11 @@ const EyeCareLanding = () => {
                   <h5 className="fw-bold mb-3" style={{ color: '#004d40' }}>Call Us</h5>
                   <p className="text-muted mb-2">Have a question? Call us directly</p>
                   <a href="tel:+12345678900" className="text-decoration-none">
-                    <h4 className="fw-bold mb-2" style={{ color: '#009688' }}>+1 (234) 567-8900</h4>
+                    <h4 className="fw-bold mb-2" style={{ color: '#009688' }}>+20 100 123 4567</h4>
                   </a>
                   <div className="mb-3 p-2 rounded-3" style={{ backgroundColor: '#f8f9fa' }}>
                     <small className="text-muted d-block"><strong>Emergency Line:</strong></small>
-                    <small className="fw-bold" style={{ color: '#009688' }}>+1 (234) 567-8911</small>
+                    <small className="fw-bold" style={{ color: '#009688' }}>+20 100 123 4568</small>
                     <small className="text-muted d-block mt-1">(24/7 Available)</small>
                   </div>
                   <a 
@@ -1909,7 +1910,7 @@ const EyeCareLanding = () => {
           <AnimatedSection>
             <div className="map-container" style={{ height: '450px' }}>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.242160313!2d-73.98731968459202!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1635782345678!5m2!1sen!2sus"
+                src="https://www.google.com/maps?q=Cairo%2C+Egypt&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -1930,8 +1931,8 @@ const EyeCareLanding = () => {
             <div className="col-lg-4">
               <div className="d-flex align-items-center mb-3">
                 <img 
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop" 
-                  alt="EyeCare Logo" 
+                  src={PUBLIC_IMAGES.eyeCare}
+                  alt="EyeCare"
                   className="me-2 rounded-circle" 
                   style={{ width: '50px', height: '50px', objectFit: 'cover' }} 
                 />
